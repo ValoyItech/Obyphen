@@ -6,18 +6,20 @@
   <title>Projects | Obyphen Electrical Construction and Projects</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Additional styles for the slideshow */
+    /* Slideshow styles */
     .slideshow-container {
       position: relative;
       max-width: 100%;
       margin: auto;
       border: 2px solid rgba(255, 255, 255, 0.7); /* Transparent border */
       padding: 10px;
+      border-radius: 8px;
     }
 
     .slide {
       display: none;
       width: 100%;
+      height: auto;
     }
 
     .active {
@@ -40,6 +42,52 @@
       font-size: 24px;
       text-decoration: none;
     }
+
+    /* Centering and responsive Facebook icon */
+    .contact-section {
+      text-align: center;
+    }
+
+    /* Ensure the background stays fixed while everything else scrolls */
+    body {
+      background: url('Images/B2.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Styling for header and transparent borders */
+    #projects h2, #contact {
+      border: 2px solid rgba(255, 255, 255, 0.7); /* Transparent border */
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Add margin-top for the "Welcome" text on Projects page */
+    #welcome {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #fff;
+    }
+    
+    /* Responsive layout for mobile view */
+    @media (max-width: 768px) {
+      .slideshow-container {
+        width: 100%;
+      }
+
+      .nav-buttons a {
+        font-size: 18px;
+      }
+
+      .contact-section {
+        text-align: center;
+      }
+
+      .company-info {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -54,7 +102,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="Index.html">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="#contact">Contact Us</a></li>
@@ -62,7 +110,11 @@
     </nav>
   </header>
 
-  <main style="background: url('Images/B2.jpeg') no-repeat center center fixed; background-size: cover;">
+  <main>
+    <section id="welcome">
+      <h1>Welcome to Obyphen Electrical Construction and Projects (PTY)</h1>
+    </section>
+
     <section id="projects">
       <h2>Projects Gallery</h2>
       <div class="slideshow-container">
@@ -94,7 +146,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact-section">
       <h2>Contact Us</h2>
       <p>29 Kleynhans Street<br>Makhado Old Town<br>Makhado, 0920</p>
       <a href="https://www.facebook.com/profile.php?id=100069461716648">
