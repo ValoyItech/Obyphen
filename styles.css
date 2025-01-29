@@ -182,3 +182,37 @@ footer a {
   height: 40px;
   margin-left: 15px;
 }
+
+/* Navigation menu fix for Projects page */
+nav ul li a {
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+/* Styling for the slideshow and images */
+.slideshow-container {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.nav-buttons a {
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-buttons a:hover {
+  color: #f39c12;
+}
