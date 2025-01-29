@@ -3,66 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obyphen Electrical - Projects</title>
+  <title>Projects | Obyphen Electrical Construction and Projects</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="project-script.js"></script>
+  <style>
+    /* Additional styles for the slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      border: 2px solid rgba(255, 255, 255, 0.7); /* Transparent border */
+      padding: 10px;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .nav-buttons a {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="Images/Logo.jpg" alt="Obyphen Logo" class="logo">
-      <div class="business-info">
-        <p>Reg No: 2015/340122/07</p>
-        <p>DOL Reg No: GN 04776</p>
-        <p>ECBSA No. 28896</p>
-        <p>Citi-Q CIC No: 4318</p>
-        <p>ETSP No. 04384</p>
-      </div>
+    <img src="Images/Logo.jpg" alt="Obyphen Logo" class="logo">
+    <div class="company-info">
+      <p>Reg No: 2015/340122/07</p>
+      <p>DOL Reg No: GN 04776</p>
+      <p>ECBSA No. 28896</p>
+      <p>Citi-Q CIC no: 4318</p>
+      <p>ETSP No: 04384</p>
     </div>
     <nav>
-      <button class="menu-toggle">Menu</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Back</a></li>
-        <li><a href="#projects">Projects</a></li>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="Projects.html">Projects</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main style="background: url('Images/B2.jpeg') no-repeat center center fixed; background-size: cover;">
     <section id="projects">
-      <h2 class="project-heading">Projects Gallery</h2>
+      <h2>Projects Gallery</h2>
       <div class="slideshow-container">
-        <div class="slide fade">
-          <img src="Images/P1.jpg" alt="Project 1" class="slide-image">
-        </div>
-        <div class="slide fade">
-          <img src="Images/P2.jpg" alt="Project 2" class="slide-image">
-        </div>
-        <div class="slide fade">
-          <img src="Images/P3.jpg" alt="Project 3" class="slide-image">
-        </div>
-        <!-- Add more slides for images P4.jpg to P20.jpg here -->
+        <!-- Slides -->
+        <img class="slide active" src="Images/P1.jpg" alt="Project 1">
+        <img class="slide" src="Images/P2.jpg" alt="Project 2">
+        <img class="slide" src="Images/P3.jpg" alt="Project 3">
+        <img class="slide" src="Images/P4.jpg" alt="Project 4">
+        <img class="slide" src="Images/P5.jpg" alt="Project 5">
+        <img class="slide" src="Images/P6.jpg" alt="Project 6">
+        <img class="slide" src="Images/P7.jpg" alt="Project 7">
+        <img class="slide" src="Images/P8.jpg" alt="Project 8">
+        <img class="slide" src="Images/P9.jpg" alt="Project 9">
+        <img class="slide" src="Images/P10.jpg" alt="Project 10">
+        <img class="slide" src="Images/P11.jpg" alt="Project 11">
+        <img class="slide" src="Images/P12.jpg" alt="Project 12">
+        <img class="slide" src="Images/P13.jpg" alt="Project 13">
+        <img class="slide" src="Images/P14.jpg" alt="Project 14">
+        <img class="slide" src="Images/P15.jpg" alt="Project 15">
+        <img class="slide" src="Images/P16.jpg" alt="Project 16">
+        <img class="slide" src="Images/P17.jpg" alt="Project 17">
+        <img class="slide" src="Images/P18.jpg" alt="Project 18">
+        <img class="slide" src="Images/P19.jpg" alt="Project 19">
+        <img class="slide" src="Images/P20.jpg" alt="Project 20">
+      </div>
+      <div class="nav-buttons">
+        <a href="javascript:void(0);" class="prev">&#10094;</a>
+        <a href="javascript:void(0);" class="next">&#10095;</a>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>29 Kleynhans Street</p>
-      <p>Makhado Old Town</p>
-      <p>Makhado</p>
-      <p>0920</p>
-      <p>Chris Hamule: 082 409 6419</p>
-      <p>NB Hamule: 081 207 0961</p>
-      <p>Email: <a href="mailto:obyphen@gmail.com">obyphen@gmail.com</a></p>
-      <a href="https://www.facebook.com/profile.php?id=100069461716648" target="_blank">
-        <img src="Images/FB.png" alt="Facebook" class="social-icon">
+      <p>29 Kleynhans Street<br>Makhado Old Town<br>Makhado, 0920</p>
+      <a href="https://www.facebook.com/profile.php?id=100069461716648">
+        <img src="Images/FB.png" alt="Facebook" width="50">
       </a>
     </section>
   </main>
 
   <footer>
-    <p>2025 Obyphen Electrical | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html" target="_blank">Hector Baloyi</a></p>
+    <p>2025 Obyphen Electrical | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html">Hector Baloyi</a></p>
   </footer>
+
+  <script>
+    // Slideshow JavaScript
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    function showSlides() {
+      slides.forEach((slide, index) => {
+        slide.style.display = 'none';
+      });
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = 'block';
+    }
+
+    function nextSlide() {
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      showSlides();
+    }
+
+    function prevSlide() {
+      slideIndex--;
+      if (slideIndex < 1) { slideIndex = slides.length; }
+      showSlides();
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    setInterval(showSlides, 5000); // Change image every 5 seconds
+    showSlides(); // Initial display
+  </script>
 </body>
-</html>
+          </html>
