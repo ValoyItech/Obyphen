@@ -87,6 +87,66 @@
       .company-info {
         display: none;
       }
+
+      /* Mobile Menu styles */
+      .menu-btn {
+        display: block;
+        font-size: 18px;
+        background-color: #2980b9;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .nav-mobile {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-mobile ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-mobile ul li {
+        margin: 15px 0;
+      }
+
+      .nav-mobile ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      .nav-mobile ul li a:hover {
+        color: #f39c12;
+      }
+
+      /* Show menu when activated */
+      .nav-mobile.active {
+        display: flex;
+      }
+
+      /* Close the menu */
+      .close-menu {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
     }
   </style>
 </head>
@@ -102,13 +162,26 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="Index.html">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
+    <!-- Mobile Menu Button -->
+    <button class="menu-btn" id="menu-btn">Menu</button>
   </header>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <span class="close-menu" id="close-menu">&#10005;</span>
+    <ul>
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
 
   <main>
     <section id="welcome">
@@ -192,6 +265,19 @@
 
     setInterval(showSlides, 5000); // Change image every 5 seconds
     showSlides(); // Initial display
+
+    // Mobile menu toggle functionality
+    const menuBtn = document.getElementById('menu-btn');
+    const navMobile = document.getElementById('nav-mobile');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuBtn.addEventListener('click', () => {
+      navMobile.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      navMobile.classList.remove('active');
+    });
   </script>
 </body>
-          </html>
+  </html>
