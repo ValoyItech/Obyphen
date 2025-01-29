@@ -66,33 +66,6 @@ nav ul li a:hover {
   color: #f39c12;
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    width: 200px;
-    padding: 10px 0;
-  }
-
-  .nav-links li {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
 main {
   padding: 20px;
   background: rgba(255, 255, 255, 0.6);
@@ -144,4 +117,68 @@ footer {
 footer a {
   color: #f39c12;
   font-weight: bold;
+}
+
+/* Projects Gallery */
+.project-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Social Icon */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
 }
