@@ -15,8 +15,33 @@ header {
   color: #fff;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  max-height: 60px;
+  max-height: 120px;
+}
+
+.business-info {
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 nav ul {
@@ -41,9 +66,36 @@ nav ul li a:hover {
   color: #f39c12;
 }
 
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 main {
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.6);
   max-width: 1000px;
   margin: 20px auto;
   border-radius: 8px;
@@ -52,6 +104,16 @@ main {
 
 h1, h2 {
   color: #2c3e50;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 
 ul {
@@ -69,4 +131,17 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f39c12;
+  font-weight: bold;
 }
