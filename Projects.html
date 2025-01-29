@@ -6,146 +6,100 @@
   <title>Projects | Obyphen Electrical Construction and Projects</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Slideshow styles */
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      border: 2px solid rgba(255, 255, 255, 0.7); /* Transparent border */
-      padding: 10px;
-      border-radius: 8px;
-    }
-
-    .slide {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
-
-    .active {
-      display: block;
-    }
-
-    .nav-buttons {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 10px;
-    }
-
-    .nav-buttons a {
-      color: #fff;
-      font-size: 24px;
-      text-decoration: none;
-    }
-
-    /* Centering and responsive Facebook icon */
-    .contact-section {
-      text-align: center;
-    }
-
-    /* Ensure the background stays fixed while everything else scrolls */
+    /* Ensure background stays fixed while content scrolls */
     body {
       background: url('Images/B2.jpeg') no-repeat center center fixed;
       background-size: cover;
     }
 
-    /* Styling for header and transparent borders */
-    #projects h2, #contact {
-      border: 2px solid rgba(255, 255, 255, 0.7); /* Transparent border */
+    /* Desktop Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.8);
       padding: 10px;
-      border-radius: 8px;
     }
 
-    /* Add margin-top for the "Welcome" text on Projects page */
-    #welcome {
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Hide navigation by default on mobile */
+    .nav-mobile {
+      display: none;
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-mobile.active {
+      display: flex;
+    }
+
+    .nav-mobile ul {
+      list-style: none;
       text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      margin-top: 20px;
-      color: #fff;
+      padding: 0;
     }
-    
-    /* Responsive layout for mobile view */
+
+    .nav-mobile ul li {
+      margin: 15px 0;
+    }
+
+    .nav-mobile ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .close-menu {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Mobile Menu Button */
+    .menu-btn {
+      display: none;
+      font-size: 18px;
+      background: #2980b9;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
-      .slideshow-container {
-        width: 100%;
+      nav {
+        display: none; /* Hide desktop nav */
       }
 
-      .nav-buttons a {
-        font-size: 18px;
-      }
-
-      .contact-section {
-        text-align: center;
-      }
-
-      .company-info {
-        display: none;
-      }
-
-      /* Mobile Menu styles */
       .menu-btn {
         display: block;
-        font-size: 18px;
-        background-color: #2980b9;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        border: none;
-        width: 100%;
-        cursor: pointer;
-      }
-
-      .nav-mobile {
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .nav-mobile ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .nav-mobile ul li {
-        margin: 15px 0;
-      }
-
-      .nav-mobile ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-      }
-
-      .nav-mobile ul li a:hover {
-        color: #f39c12;
-      }
-
-      /* Show menu when activated */
-      .nav-mobile.active {
-        display: flex;
-      }
-
-      /* Close the menu */
-      .close-menu {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
       }
     }
   </style>
@@ -160,119 +114,30 @@
       <p>Citi-Q CIC no: 4318</p>
       <p>ETSP No: 04384</p>
     </div>
-    <nav>
+
+    <!-- Menu Button (Only for Mobile) -->
+    <button class="menu-btn" id="menu-btn">Menu</button>
+
+    <!-- Mobile Navigation Menu (Hidden by default) -->
+    <div class="nav-mobile" id="nav-mobile">
+      <span class="close-menu" id="close-menu">&#10005;</span>
       <ul>
         <li><a href="Index.html">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
-    </nav>
-    <!-- Mobile Menu Button -->
-    <button class="menu-btn" id="menu-btn">Menu</button>
+    </div>
   </header>
 
-  <!-- Mobile Navigation Menu -->
-  <div class="nav-mobile" id="nav-mobile">
-    <span class="close-menu" id="close-menu">&#10005;</span>
-    <ul>
-      <li><a href="Index.html">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="Projects.html">Projects</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </div>
-
-  <main>
-    <section id="welcome">
-      <h1>Welcome to Obyphen Electrical Construction and Projects (PTY)</h1>
-    </section>
-
-    <section id="projects">
-      <h2>Projects Gallery</h2>
-      <div class="slideshow-container">
-        <!-- Slides -->
-        <img class="slide active" src="Images/P1.jpg" alt="Project 1">
-        <img class="slide" src="Images/P2.jpg" alt="Project 2">
-        <img class="slide" src="Images/P3.jpg" alt="Project 3">
-        <img class="slide" src="Images/P4.jpg" alt="Project 4">
-        <img class="slide" src="Images/P5.jpg" alt="Project 5">
-        <img class="slide" src="Images/P6.jpg" alt="Project 6">
-        <img class="slide" src="Images/P7.jpg" alt="Project 7">
-        <img class="slide" src="Images/P8.jpg" alt="Project 8">
-        <img class="slide" src="Images/P9.jpg" alt="Project 9">
-        <img class="slide" src="Images/P10.jpg" alt="Project 10">
-        <img class="slide" src="Images/P11.jpg" alt="Project 11">
-        <img class="slide" src="Images/P12.jpg" alt="Project 12">
-        <img class="slide" src="Images/P13.jpg" alt="Project 13">
-        <img class="slide" src="Images/P14.jpg" alt="Project 14">
-        <img class="slide" src="Images/P15.jpg" alt="Project 15">
-        <img class="slide" src="Images/P16.jpg" alt="Project 16">
-        <img class="slide" src="Images/P17.jpg" alt="Project 17">
-        <img class="slide" src="Images/P18.jpg" alt="Project 18">
-        <img class="slide" src="Images/P19.jpg" alt="Project 19">
-        <img class="slide" src="Images/P20.jpg" alt="Project 20">
-      </div>
-      <div class="nav-buttons">
-        <a href="javascript:void(0);" class="prev">&#10094;</a>
-        <a href="javascript:void(0);" class="next">&#10095;</a>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <h2>Contact Us</h2>
-      <p>29 Kleynhans Street<br>Makhado Old Town<br>Makhado, 0920</p>
-      <a href="https://www.facebook.com/profile.php?id=100069461716648">
-        <img src="Images/FB.png" alt="Facebook" width="50">
-      </a>
-    </section>
-  </main>
-
-  <footer>
-    <p>2025 Obyphen Electrical | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html">Hector Baloyi</a></p>
-  </footer>
-
   <script>
-    // Slideshow JavaScript
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    function showSlides() {
-      slides.forEach((slide, index) => {
-        slide.style.display = 'none';
-      });
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = 'block';
-    }
-
-    function nextSlide() {
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      showSlides();
-    }
-
-    function prevSlide() {
-      slideIndex--;
-      if (slideIndex < 1) { slideIndex = slides.length; }
-      showSlides();
-    }
-
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-
-    setInterval(showSlides, 5000); // Change image every 5 seconds
-    showSlides(); // Initial display
-
-    // Mobile menu toggle functionality
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById('menu-btn');
     const navMobile = document.getElementById('nav-mobile');
     const closeMenu = document.getElementById('close-menu');
 
     menuBtn.addEventListener('click', () => {
-      navMobile.classList.toggle('active');
+      navMobile.classList.add('active');
     });
 
     closeMenu.addEventListener('click', () => {
@@ -280,4 +145,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
