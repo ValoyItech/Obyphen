@@ -1,218 +1,352 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  background: url('Images/B1.jpeg') no-repeat center center fixed;
-  background-size: cover;
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    color: black; /* Ensures all text is black */
+    background: url('Images/B1.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Transparent Overlay */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    z-index: -1;
+}
+
+/* Header & Logo */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-  max-height: 120px;
+    max-height: 120px;
+    animation: fadeIn 1s ease-in;
 }
 
 .business-info {
-  margin-left: 20px;
-  font-size: 14px;
-  line-height: 1.5;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    animation: fadeIn 1s ease-in 0.3s;
 }
 
+/* Navigation */
 nav {
-  position: relative;
+    position: relative;
 }
 
-.menu-toggle {
-  display: none;
-  background: #f39c12;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-weight: bold;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    border: 2px solid transparent;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #f39c12;
-}
-
-main {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.6);
-  max-width: 1000px;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1, h2 {
-  color: #2c3e50;
-}
-
-.welcome-text {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 15px;
-  text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #2980b9;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 14px;
-}
-
-footer a {
-  color: #f39c12;
-  font-weight: bold;
-}
-
-/* Projects Gallery */
-.project-heading {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 20px 0;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-}
-
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.slide {
-  display: none;
-  text-align: center;
-}
-
-.slide-image {
-  width: 100%;
-  max-height: 500px;
-  object-fit: contain;
+.nav-links a:hover {
+    color: #007bff;
+    border: 2px solid #007bff;
 }
 
 /* Mobile Navigation */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
+.menu-toggle {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    width: 200px;
-    padding: 10px 0;
-  }
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-  .nav-links li {
-    text-align: center;
-    margin: 10px 0;
-  }
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
-  .nav-links.active {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        width: 200px;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Mobile Overlay Menu */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.active {
     display: flex;
-  }
 }
 
-/* Social Icon */
+.overlay ul {
+    list-style: none;
+    text-align: center;
+}
+
+.overlay ul li {
+    margin: 20px 0;
+}
+
+.overlay ul li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Transparent Section Divisions */
+.transparent-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Layout Wrapping */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section */
+.welcome-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+}
+
+/* Contact Section */
+#contact p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Social Media Icons */
+.social-container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
 .social-icon {
-  width: 40px;
-  height: 40px;
-  margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
 }
 
-/* Navigation menu fix for Projects page */
-nav ul li a {
-  font-size: 18px;
-  padding: 10px;
-  display: block;
-  text-align: center;
+.social-icon:hover {
+    transform: scale(1.1);
 }
 
-/* Styling for the slideshow and images */
-.slideshow-container {
-  width: 100%;
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.slide {
-  display: none;
-  width: 100%;
-  height: auto;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .business-info {
+        text-align: left;
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
-.nav-buttons a {
-  color: white;
-  font-size: 36px;
-  text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s;
+@media (max-width: 480px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .business-info {
+        font-size: 0.65rem;
+    }
 }
 
-.nav-buttons a:hover {
-  color: #f39c12;
+/* Mobile Menu Icon Adjustments */
+.menu-toggle img {
+    width: 50px;  /* Adjust this to your preferred size */
+    height: 50px; /* Adjust this to your preferred size */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
+/* Welcome Section */
+.welcome-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-bottom: 30px; /* Add space below the welcome section */
+}
+
+/* Additional Spacing for the Sections Below */
+#about, #contact {
+    margin-top: 30px; /* Add space above these sections */
+}
+/* Welcome Section */
+.welcome-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-bottom: 40px; /* Adjusted spacing below the welcome section */
+}
+
+/* Paragraph Spacing */
+main p {
+    margin-bottom: 20px; /* Adds spacing between paragraphs */
+}
+
+/* Additional Spacing for the Sections Below */
+#about, #contact {
+    margin-top: 40px; /* Added space above these sections */
+}
+/* Mission and Vision Section */
+h2 {
+    margin-bottom: 20px; /* Adds space below the section heading */
+}
+
+h3 {
+    margin-top: 20px; /* Adds space above the 'Mission' and 'Vision' subsections */
+}
+
+/* Main Areas of Activities Section */
+#about h2 {
+    margin-bottom: 20px; /* Adds space below the "Main Areas of Activities" heading */
+}
+
+#about ul {
+    margin-top: 20px; /* Adds space above the bullet list */
+}
+/* Spacing after Mission heading */
+#about h3:nth-of-type(1) + p {
+    margin-top: 20px; /* Adds space between the "Mission" heading and the paragraph below */
+}
+
+/* Spacing after Vision heading */
+#about h3:nth-of-type(2) + p {
+    margin-top: 20px; /* Adds space between the "Vision" heading and the paragraph below */
+}
+/* Initial state for the menu toggle icon */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+/* When scrolled, make header and menu toggle disappear */
+.scrolled {
+    opacity: 0;  /* This makes the icon disappear */
+    pointer-events: none;  /* This disables interactions with the icon when it's hidden */
+}
+
+/* Ensure header is hidden when scrolled */
+header.scrolled {
+    display: none;  /* Hides the entire header when scrolled */
+  }
