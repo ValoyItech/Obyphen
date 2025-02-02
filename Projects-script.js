@@ -118,3 +118,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ... rest of existing code ...
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('quotation-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent default form submission
+    const formData = new FormData(form);
+
+    // Send form data to FormSubmit
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      // Redirect to the thank you page after the form is submitted
+      window.location.href = 'https://valoyitech.github.io/Obyphen/thankyou.html';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+});
