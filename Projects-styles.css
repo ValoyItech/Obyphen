@@ -418,3 +418,369 @@ section {
   padding-bottom: 10px !important;
 }
 
+@media (max-width: 768px) {
+  /* Improve header spacing */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Ensure logo and info stack nicely */
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-info {
+    text-align: center;
+  }
+
+  /* Make slideshow container fit mobile screens */
+  .slideshow-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+
+  /* Make form inputs full-width */
+  .quotation-form input,
+  .quotation-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .quotation-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  /* Contact section spacing */
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Make sure address and social icons are centered */
+  .contact-address {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .logo-container {
+    justify-content: flex-start; /* Aligns items to the left */
+  }
+  
+  .logo {
+    margin-left: 0; /* Ensure no extra margin */
+  }
+}
+@media (max-width: 768px) {
+  .logo-container {
+      justify-content: flex-start !important;
+      text-align: left !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo-container {
+      display: block;
+      text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .logo-container {
+      display: flex;
+      justify-content: flex-start; /* Pushes content to the left */
+      align-items: center; /* Keeps it vertically aligned */
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+      position: absolute;
+      left: 0;
+  }
+}
+<div class="header-left">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <span class="registration-info">Register Now!</span>
+</div>
+@media (max-width: 768px) {
+  .header-left {
+      display: flex;
+      align-items: center; /* Keeps them aligned properly */
+      gap: 5px; /* Small space between logo and text */
+  }
+
+  .registration-info {
+      font-size: 14px; /* Adjust size if needed */
+  }
+}
+@media (max-width: 768px) {
+  header {
+      padding: 10px; /* Adds space around the header content */
+  }
+
+  .header-left {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      max-width: 100%; /* Prevents overflow */
+      overflow: hidden; /* Ensures nothing overflows the header */
+  }
+
+  .logo {
+      max-width: 100px; /* Optional: Limit the size of the logo */
+  }
+
+  .registration-info {
+      font-size: 14px;
+      white-space: nowrap; /* Keeps the text on one line */
+      overflow: hidden;
+      text-overflow: ellipsis; /* If the text is too long, show an ellipsis */
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+      max-width: 80px; /* Resize the logo for mobile view */
+      height: auto; /* Ensure the logo's aspect ratio is maintained */
+  }
+}
+@media (max-width: 768px) {
+  .header-container {
+      display: flex;
+      justify-content: flex-start; /* Align items to the left */
+      align-items: center; /* Vertically center the logo and text */
+  }
+
+  .logo {
+      max-width: 80px; /* Resize the logo */
+      height: auto;
+  }
+
+  .registration-info {
+      margin-left: 10px; /* Adjust the spacing between the logo and registration text */
+  }
+}
+@media (max-width: 768px) {
+  .header-container {
+      display: flex;
+      align-items: center; /* Vertically center the logo and text */
+  }
+
+  .logo {
+      max-width: 80px; /* Resize the logo */
+      height: auto;
+  }
+
+  .registration-info {
+      display: inline-flex; /* Ensures the text stays inline */
+      margin-left: 10px; /* Adjust the spacing between the logo and registration text */
+  }
+}
+/* Prevent overflow on mobile */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Align items to the left */
+      width: 100%;
+      box-sizing: border-box; /* Ensure padding and borders don't cause overflow */
+  }
+
+  .logo {
+      max-width: 80px; /* Resize logo */
+      height: auto;
+      margin-left: 10px;
+  }
+
+  .registration-info {
+      display: inline-flex;
+      margin-left: 10px;
+      align-items: center; /* Vertically align registration info */
+      flex-wrap: nowrap;
+      box-sizing: border-box;
+  }
+
+  /* Make sure the header background fits the screen width */
+  .header {
+      width: 100%;
+      box-sizing: border-box; /* Make sure borders don't add extra width */
+  }
+
+  /* Adjust any other sections to prevent overflow */
+  .container {
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+  }
+}
+/* Resize the menu icon for mobile */
+@media (max-width: 768px) {
+  .menu-icon {
+      width: 100px; /* Adjust the size of menu icon */
+      height: auto;
+  }
+}
+
+/* Full-screen overlay menu */
+.full-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Background with opacity */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it appears on top */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Display the overlay menu when active */
+.full-screen-menu.active {
+  display: block;
+}
+
+/* Menu content */
+.full-screen-menu .menu-content {
+  color: #fff;
+  text-align: center;
+}
+
+/* Ensure no margin or padding is added by default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header adjustments */
+header {
+  margin-bottom: 15px; /* Adjust the space below the header */
+}
+
+/* Welcome text section */
+.welcome-text {
+  margin-top: 10px; /* Reduce space above welcome text */
+  margin-bottom: 10px; /* Reduce space below welcome text */
+}
+
+/* Project gallery section */
+.project-gallery {
+  margin-top: 10px; /* Reduce space above the gallery */
+}
+
+/* For all views (desktop, tablet, mobile) */
+@media (max-width: 1200px) {
+  header, .welcome-text, .project-gallery {
+      margin-bottom: 15px; /* Consistent spacing across all sections */
+  }
+}
+
+@media (max-width: 768px) {
+  header, .welcome-text, .project-gallery {
+      margin-bottom: 10px; /* Even smaller spacing for mobile */
+  }
+}
+/* Global Reset for Spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure no extra space between sections */
+body {
+  margin: 0;
+}
+
+/* Header adjustments */
+header {
+  margin-bottom: 10px; /* Reduced margin below header */
+}
+
+/* Welcome Text Section */
+#welcome {
+  margin-top: 10px; /* Reduced margin above the welcome section */
+  margin-bottom: 10px; /* Reduced margin below the welcome section */
+}
+
+/* Project Gallery Section */
+#projects {
+  margin-top: 10px; /* Reduced margin above the project gallery */
+  margin-bottom: 10px; /* Reduced margin below the project gallery */
+}
+
+/* Quotation Section */
+#quotation {
+  margin-top: 10px; /* Reduced margin above the quotation section */
+  margin-bottom: 10px; /* Reduced margin below the quotation section */
+}
+
+/* Contact Section */
+#contact {
+  margin-top: 10px; /* Reduced margin above the contact section */
+}
+
+/* Footer adjustments */
+footer {
+  margin-top: 10px; /* Reduced margin above footer */
+}
+
+/* For tablet and smaller screens */
+@media (max-width: 768px) {
+  /* Make the spacing smaller for mobile devices */
+  header, #welcome, #projects, #quotation, #contact, footer {
+      margin-bottom: 5px; /* Adjusted spacing for mobile */
+  }
+}
+/* Remove conflicting margin/padding rules */
+#welcome {
+  position: relative;
+  /* Remove height: 100vh */
+  height: auto;
+  min-height: 300px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 !important; /* Add vertical padding */
+  margin: 0 !important;
+}
+
+/* Add this to control section spacing */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust this value to control spacing between sections */
+  padding: 20px 0;
+}
+
+/* Remove all previous margin/padding overrides */
+section {
+  margin: 0 !important;
+  padding: 0 !important;
+  }
