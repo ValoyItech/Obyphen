@@ -88,3 +88,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startAutoSlide();
 });
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (navMobile.classList.contains('active') && !e.target.closest('.nav-mobile') && !e.target.closest('#menu-btn')) {
+    toggleMenu();
+  }
+});
+// Toggle the full-screen menu
+document.querySelector('.menu-icon').addEventListener('click', function() {
+  document.querySelector('.full-screen-menu').classList.toggle('active');
+});
+document.addEventListener("DOMContentLoaded", () => {
+  // ... existing mobile menu code ...
+
+  // Add this to close menu when clicking menu items
+  document.querySelectorAll('.nav-mobile a').forEach(link => {
+    link.addEventListener('click', toggleMenu);
+  });
+
+  // Update existing click handler
+  document.addEventListener('click', (e) => {
+    if (navMobile.classList.contains('active') && 
+        !e.target.closest('.nav-mobile') && 
+        !e.target.closest('#menu-btn')) {
+      toggleMenu();
+    }
+  });
+
+  // ... rest of existing code ...
+});
