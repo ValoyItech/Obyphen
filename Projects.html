@@ -4,156 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Obyphen Electrical Construction and Projects</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Background stays fixed while everything else scrolls */
-    body {
-      background: url('Images/B2.jpeg') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    /* Centering "Welcome" text */
-    #welcome {
-      text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      margin-top: 20px;
-      color: #fff;
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      border-radius: 8px;
-      display: inline-block;
-    }
-
-    /* Transparent Borders */
-    #projects h2, #contact {
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      border-radius: 8px;
-    }
-
-    /* Slideshow */
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      border-radius: 8px;
-    }
-
-    .slide {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
-
-    /* Navigation buttons */
-    .nav-buttons {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 10px;
-    }
-
-    .nav-buttons a {
-      color: #fff;
-      font-size: 24px;
-      text-decoration: none;
-    }
-
-    /* Centering Facebook icon */
-    .contact-section {
-      text-align: center;
-    }
-
-    /* Mobile Menu */
-    .menu-btn {
-      display: none;
-      font-size: 18px;
-      background-color: #2980b9;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .nav-mobile {
-      display: none;
-      background-color: rgba(0, 0, 0, 0.9);
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-mobile ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    .nav-mobile ul li {
-      margin: 15px 0;
-    }
-
-    .nav-mobile ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-    }
-
-    .nav-mobile ul li a:hover {
-      color: #f39c12;
-    }
-
-    .nav-mobile.active {
-      display: flex;
-    }
-
-    .close-menu {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-    }
-
-    /* Hide desktop menu on mobile */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="Projects-styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="Projects-script.js" defer></script>
 </head>
 <body>
-
   <header>
-    <img src="Images/Logo.jpg" alt="Obyphen Logo" class="logo">
-    <div class="company-info">
-      <p>Reg No: 2015/340122/07</p>
-      <p>DOL Reg No: GN 04776</p>
-      <p>ECBSA No. 28896</p>
-      <p>Citi-Q CIC no: 4318</p>
-      <p>ETSP No: 04384</p>
+    <div class="logo-container">
+      <img src="Images/Logo.jpg" alt="Obyphen Logo" class="logo">
+      <div class="company-info">
+        <p>Reg No: 2015/340122/07</p>
+        <p>DOL Reg No: GN 04776</p>
+        <p>ECBSA No. 28896</p>
+        <p>Citi-Q CIC no: 4318</p>
+        <p>ETSP No: 04384</p>
+      </div>
     </div>
-    <nav>
+    <nav class="desktop-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">About Us</a></li>
@@ -161,86 +28,114 @@
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
-    <!-- Mobile Menu Button -->
-    <button class="menu-btn" id="menu-btn">Menu</button>
+    <button class="menu-btn" id="menu-btn">
+      <img src="Images/menu.png" alt="Menu">
+    </button>
   </header>
 
-  <!-- Mobile Navigation Menu -->
   <div class="nav-mobile" id="nav-mobile">
-    <span class="close-menu" id="close-menu">&#10005;</span>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="Projects.html">Projects</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
+    <div class="nav-overlay">
+      <span class="close-menu" id="close-menu">&#10005;</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
   </div>
 
   <main>
     <section id="welcome">
-      <h1>Welcome to Obyphen Electrical Construction and Projects (PTY)</h1>
+      <div class="welcome-container">
+        <h1>Welcome to Obyphen Electrical Construction and Projects (PTY)</h1>
+      </div>
     </section>
 
     <section id="projects">
       <h2>Projects Gallery</h2>
       <div class="slideshow-container">
-        <!-- Slides -->
-        <img class="slide active" src="Images/P1.jpg" alt="Project 1">
-        <img class="slide" src="Images/P2.jpg" alt="Project 2">
-        <img class="slide" src="Images/P3.jpg" alt="Project 3">
-        <img class="slide" src="Images/P4.jpg" alt="Project 4">
-        <img class="slide" src="Images/P5.jpg" alt="Project 5">
-        <img class="slide" src="Images/P6.jpg" alt="Project 6">
-        <img class="slide" src="Images/P7.jpg" alt="Project 7">
-        <img class="slide" src="Images/P8.jpg" alt="Project 8">
-        <img class="slide" src="Images/P9.jpg" alt="Project 9">
-        <img class="slide" src="Images/P10.jpg" alt="Project 10">
-        <img class="slide" src="Images/P11.jpg" alt="Project 11">
-        <img class="slide" src="Images/P12.jpg" alt="Project 12">
-        <img class="slide" src="Images/P13.jpg" alt="Project 13">
-        <img class="slide" src="Images/P14.jpg" alt="Project 14">
-        <img class="slide" src="Images/P15.jpg" alt="Project 15">
-        <img class="slide" src="Images/P16.jpg" alt="Project 16">
-        <img class="slide" src="Images/P17.jpg" alt="Project 17">
-        <img class="slide" src="Images/P18.jpg" alt="Project 18">
-        <img class="slide" src="Images/P19.jpg" alt="Project 19">
-        <img class="slide" src="Images/P20.jpg" alt="Project 20">
+        <button id="prev" class="prev">&#10094;</button>
+        <div class="slideshow-track">
+          <div class="slide"><img src="Images/P1.jpg" alt="Project 1"></div>
+          <div class="slide"><img src="Images/P2.jpg" alt="Project 2"></div>
+          <div class="slide"><img src="Images/P3.jpg" alt="Project 3"></div>
+          <div class="slide"><img src="Images/P4.jpg" alt="Project 4"></div>
+          <div class="slide"><img src="Images/P5.jpg" alt="Project 5"></div>
+          <div class="slide"><img src="Images/P6.jpg" alt="Project 6"></div>
+          <div class="slide"><img src="Images/P7.jpg" alt="Project 7"></div>
+          <div class="slide"><img src="Images/P8.jpg" alt="Project 8"></div>
+          <div class="slide"><img src="Images/P9.jpg" alt="Project 9"></div>
+          <div class="slide"><img src="Images/P10.jpg" alt="Project 10"></div>
+          <div class="slide"><img src="Images/P11.jpg" alt="Project 11"></div>
+          <div class="slide"><img src="Images/P12.jpg" alt="Project 12"></div>
+          <div class="slide"><img src="Images/P13.jpg" alt="Project 13"></div>
+          <div class="slide"><img src="Images/P14.jpg" alt="Project 14"></div>
+          <div class="slide"><img src="Images/P15.jpg" alt="Project 15"></div>
+          <div class="slide"><img src="Images/P16.jpg" alt="Project 16"></div>
+          <div class="slide"><img src="Images/P17.jpg" alt="Project 17"></div>
+          <div class="slide"><img src="Images/P18.jpg" alt="Project 18"></div>
+          <div class="slide"><img src="Images/P19.jpg" alt="Project 19"></div>
+          <div class="slide"><img src="Images/P20.jpg" alt="Project 20"></div>
+        </div>
+        <button id="next" class="next">&#10095;</button>
+      </div>
+
+      <div class="dots">
+        <span class="dot active" onclick="jumpToSlide(0)"></span>
+        <span class="dot" onclick="jumpToSlide(1)"></span>
+        <span class="dot" onclick="jumpToSlide(2)"></span>
+        <span class="dot" onclick="jumpToSlide(3)"></span>
+        <span class="dot" onclick="jumpToSlide(4)"></span>
+        <span class="dot" onclick="jumpToSlide(5)"></span>
+        <span class="dot" onclick="jumpToSlide(6)"></span>
+        <span class="dot" onclick="jumpToSlide(7)"></span>
+        <span class="dot" onclick="jumpToSlide(8)"></span>
+        <span class="dot" onclick="jumpToSlide(9)"></span>
+        <span class="dot" onclick="jumpToSlide(10)"></span>
+        <span class="dot" onclick="jumpToSlide(11)"></span>
+        <span class="dot" onclick="jumpToSlide(12)"></span>
+        <span class="dot" onclick="jumpToSlide(13)"></span>
+        <span class="dot" onclick="jumpToSlide(14)"></span>
+        <span class="dot" onclick="jumpToSlide(15)"></span>
+        <span class="dot" onclick="jumpToSlide(16)"></span>
+        <span class="dot" onclick="jumpToSlide(17)"></span>
+        <span class="dot" onclick="jumpToSlide(18)"></span>
+        <span class="dot" onclick="jumpToSlide(19)"></span>
       </div>
     </section>
 
+    <section id="quotation">
+      <h2>Request a Quotation</h2>
+      <form class="quotation-form">
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Location" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Required Service" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
     <section id="contact" class="contact-section">
-      <h2>Contact Us</h2>
-      <p>29 Kleynhans Street<br>Makhado Old Town<br>Makhado, 0920</p>
-      <a href="https://www.facebook.com/profile.php?id=100069461716648">
-        <img src="Images/FB.png" alt="Facebook" width="50">
-      </a>
+      <div class="contact-info">
+        <h3>Contact Details:</h3>
+        <p>Chris Hamule: 082 409 6419</p>
+        <p>NB Hamule: 081 207 0961</p>
+        <p>Email: obyphen@gmail.com</p>
+      </div>
+      <div class="contact-address">
+        <h2>Contact Us</h2>
+        <p>29 Kleynhans Street<br>Makhado Old Town<br>Makhado, 0920</p>
+        <a href="https://www.facebook.com/profile.php?id=100069461716648">
+          <img src="Images/FB.png" alt="Facebook" width="50">
+        </a>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>2025 Obyphen Electrical | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html">Hector Baloyi</a></p>
   </footer>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function showSlides() {
-      slides.forEach(slide => slide.style.display = 'none');
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].style.display = 'block';
-    }
-
-    setInterval(showSlides, 5000);
-    showSlides();
-
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('nav-mobile').classList.add('active');
-    });
-
-    document.getElementById('close-menu').addEventListener('click', () => {
-      document.getElementById('nav-mobile').classList.remove('active');
-    });
-  </script>
 </body>
-  </html>
+</html>
