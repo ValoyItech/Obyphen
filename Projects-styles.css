@@ -783,4 +783,27 @@ main {
 section {
   margin: 0 !important;
   padding: 0 !important;
+}
+.business-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Aligns text vertically */
+  height: 90px; /* Matches logo height */
+  font-size: 10px; /* Adjusts font size */
+  line-height: 1.2; /* Ensures good readability */
+  padding-left: 10px; /* Adds some spacing from logo */
+  font-family: 'Montserrat', sans-serif; /* Ensures consistency */
+}
+@media (max-width: 768px) { /* Adjust for mobile screens */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensure left alignment */
+    gap: 0; /* Remove any space */
+  }
+
+  .business-info {
+    margin-left: -5px; /* Adjust as needed */
+    text-align: left; /* Prevent auto-centering */
+  }
   }
