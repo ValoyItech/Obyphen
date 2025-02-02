@@ -7,6 +7,26 @@
   <link rel="stylesheet" href="Projects-styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="Projects-script.js" defer></script>
+  <style>
+    /* Additional Styles for Formsubmit Form */
+    .quotation-form input, .quotation-form textarea, .quotation-form button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .quotation-form button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .quotation-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -32,7 +52,6 @@
       <img src="Images/menu.png" alt="Menu">
     </button>
   </header>
-
   <div class="nav-mobile" id="nav-mobile">
     <div class="nav-overlay">
       <span class="close-menu" id="close-menu">&#10005;</span>
@@ -51,12 +70,12 @@
         <h1>Welcome to Obyphen Electrical Construction and Projects (PTY)</h1>
       </div>
     </section>
-
     <section id="projects">
       <h2>Projects Gallery</h2>
       <div class="slideshow-container">
         <button id="prev" class="prev">&#10094;</button>
         <div class="slideshow-track">
+          <!-- Slide 1 to 20 Images -->
           <div class="slide"><img src="Images/P1.jpg" alt="Project 1"></div>
           <div class="slide"><img src="Images/P2.jpg" alt="Project 2"></div>
           <div class="slide"><img src="Images/P3.jpg" alt="Project 3"></div>
@@ -80,7 +99,6 @@
         </div>
         <button id="next" class="next">&#10095;</button>
       </div>
-
       <div class="dots">
         <span class="dot active" onclick="jumpToSlide(0)"></span>
         <span class="dot" onclick="jumpToSlide(1)"></span>
@@ -107,14 +125,14 @@
 
     <section id="quotation">
       <h2>Request a Quotation</h2>
-      <form class="quotation-form">
-        <input type="text" placeholder="Name" required>
-        <input type="text" placeholder="Location" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Required Service" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      <form class="quotation-form" action="https://formsubmit.co/hectaville@live.com" method="POST" onsubmit="window.location.href='thankyou.html'; return false;">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="text" name="location" placeholder="Location" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <textarea name="service" placeholder="Required Service" required></textarea>
+  <button type="submit">Submit</button>
+</form>
     </section>
 
     <section id="contact" class="contact-section">
@@ -138,4 +156,4 @@
     <p>2025 Obyphen Electrical | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html">Hector Baloyi</a></p>
   </footer>
 </body>
-</html>
+      </html>
