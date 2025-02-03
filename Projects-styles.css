@@ -784,3 +784,7 @@ section {
   margin: 0 !important;
   padding: 0 !important;
     }
+.business-info {
+  font-size: 11px; /* Adjust this value as needed */
+  line-height: 1.5;
+}
