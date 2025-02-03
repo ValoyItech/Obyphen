@@ -354,3 +354,7 @@ main p {
     line-height: 1.5; /* Adjust this value to your preference */
     margin-bottom: 20px; /* Keeps spacing between paragraphs */
 }
+#about ul li {
+    line-height: 1.7; /* Adjust line height for each list item */
+    margin-bottom: 10px; /* Optional: adds space between list items */
+}
