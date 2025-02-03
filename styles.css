@@ -355,6 +355,15 @@ main p {
     margin-bottom: 20px; /* Keeps spacing between paragraphs */
 }
 #about ul li {
-    line-height: 1.7; /* Adjust line height for each list item */
+    line-height: 1.6; /* Adjust line height for each list item */
     margin-bottom: 10px; /* Optional: adds space between list items */
+}
+#about ul {
+    list-style-type: square; /* Use squares instead of circles */
+    padding-left: 20px; /* Indentation for the list */
+}
+
+#about ul li {
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
