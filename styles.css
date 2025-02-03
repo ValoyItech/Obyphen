@@ -350,3 +350,7 @@ h3 {
 header.scrolled {
     display: none;  /* Hides the entire header when scrolled */
   }
+main p {
+    line-height: 1.5; /* Adjust this value to your preference */
+    margin-bottom: 20px; /* Keeps spacing between paragraphs */
+}
