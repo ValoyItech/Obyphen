@@ -115,3 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleMenu();
     }
   });
+
+  // ... rest of existing code ...
+});
