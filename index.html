@@ -1,154 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiprope Consultant & Construction</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Obyphen Electrical Construction and Projects - Reliable Electrical Services in Makhado">
+  <title>Obyphen Electrical Construction and Projects</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <span class="header-text">Welcome to Tiprope Consultant & Construction </span> <!-- New Text -->
-        <img src="Images/Logo.jpg" alt="Company Logo" class="logo">
-
-    </header>
-    
-
-    <nav class="sidebar">
-        <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#our-work">Our Work</a></li>
-            <li><a href="#society">Our Role in Society</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
+  <header>
+    <div class="logo-container">
+      <img src="Images/Logo.jpg" alt="Obyphen Logo" class="logo">
+      <div class="business-info">
+        <p>Tax No. 9743329162</p>
+        <p>Reg No: 2015/340122/07</p>
+        <p>DOL Reg No: GN 04776</p>
+        <p>ECBSA No. 28896</p>
+        <p>Citi-Q CIC No: 4318</p>
+        <p>ETSP No. 04384</p>
+      </div>
+    </div>
+    <nav>
+      <button class="menu-toggle">
+        <img src="Images/menu.png" alt="Menu">
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <main id="mainContent">
-        <!-- First Section -->
-        <section class="intro-section">
-            <div class="text-content">
-                <h1>Tiprope Consultant & Construction</h1>
-                <p>
-                    Tiprope Consultant & Construction is a leading civil engineering firm with over 20 years of experience in executing high-profile projects. We specialize in a wide range of services, including project estimations, construction management and planning, quality control and assurance, budget management, safety and risk management, as well as the procurement and supply of materials and products.
-                </p>
-                <p>
-                    Our vast expertise is underpinned by a commitment to delivering exceptional service while fostering sustainable growth and development. We take pride in our long-standing relationships with clients and partners, helping to drive progress across industries while promoting economic empowerment within local communities.
-                </p>
-                <h2>Our Vision & Mission</h2>
-                <p>
-                    Our vision is to ensure better service delivery within the industrial landscape, initiate modern development concepts in underprivileged communities, and create a new model for architectural and infrastructural design, embodying what we term the "new African city." Through this, we strive to reshape the future and build an environment that reflects African ingenuity and pride.
-                </p>
-                <p>
-                    We are dedicated to contributing to South Africa’s GDP through job creation, focusing on developing industrial landscapes without harming the ecosystem. We aim to establish a self-sustaining blueprint through industrial means, benefiting communities and maximizing their economic potential. Our goal is to foster growth, creating a positive impact on the socio-economic fabric of the nation.
-                </p>
-            </div>
-            <div class="image-content">
-                <img src="Images/W11.jpg" alt="Construction Image">
-            </div>
-        </section>
+  <main>
+    <section id="home">
+      <h1 class="welcome-text">Welcome to Obyphen Electrical Construction and Projects (PTY)</h1>
+    </section>
 
-        <section id="our-work">
-            <div class="slideshow-container">
-                <!-- All 22 images -->
-                <img class="slide" src="Images/W1.JPG" alt="Project Image">
-                <img class="slide" src="Images/W2.jpg" alt="Project Image">
-                <img class="slide" src="Images/W3.jpg" alt="Project Image">
-                <img class="slide" src="Images/W4.jpg" alt="Project Image">
-                <img class="slide" src="Images/W5.jpg" alt="Project Image">
-                <img class="slide" src="Images/W6.jpg" alt="Project Image">
-                <img class="slide" src="Images/W7.jpg" alt="Project Image">
-                <img class="slide" src="Images/W8.jpg" alt="Project Image">
-                <img class="slide" src="Images/W9.jpg" alt="Project Image">
-                <img class="slide" src="Images/W10.jpg" alt="Project Image">
-                <img class="slide" src="Images/W11.jpg" alt="Project Image">
-                <img class="slide" src="Images/W12.jpg" alt="Project Image">
-                <img class="slide" src="Images/W13.jpg" alt="Project Image">
-                <img class="slide" src="Images/W14.jpg" alt="Project Image">
-                <img class="slide" src="Images/W15.JPG" alt="Project Image">
-                <img class="slide" src="Images/W16.jpg" alt="Project Image">
-                <img class="slide" src="Images/W17.jpg" alt="Project Image">
-                <img class="slide" src="Images/W18.jpg" alt="Project Image">
-                <img class="slide" src="Images/W19.JPG" alt="Project Image">
-                <img class="slide" src="Images/W20.JPG" alt="Project Image">
-                <img class="slide" src="Images/W21.JPG" alt="Project Image">
-                <img class="slide" src="Images/W22.JPG" alt="Project Image">
-                <img class="slide" src="Images/W23.jpg" alt="Project Image">
-                <img class="slide" src="Images/W24.jpg" alt="Project Image">
-                <img class="slide" src="Images/W25.jpg" alt="Project Image">
-                <img class="slide" src="Images/W26.jpg" alt="Project Image">
-            </div>
-        
-            <div class="services-list">
-                <h2>Our Services</h2>
-                <ul>
-                    <li>Project estimations</li>
-                    <li>Construction management and planning</li>
-                    <li>Quality control/assurance</li>
-                    <li>Budget management</li>
-                    <li>Safety management</li>
-                    <li>Risk management</li>
-                    <li>Environmental management</li>
-                    <li>Procurement and supply of materials and products</li>
-                </ul>
-            </div>
-        </section>
-        <section id="our-role">
-            <div class="container">
-                <h2>Our Role in Society</h2>
-                <p>
-                    At Tiprope Consultant & Construction, we believe that the Earth, much like a mother, provides essential sustenance to human life. As a female-managed company, we are deeply connected to the planet and its challenges. We value the Earth-to-human relationship and are committed to working with manufacturers and organizations that share our passion for the environment. We recognize the importance of maintaining sustainable practices and strive to offer greener solutions in the development of the industrial landscape. We take every step possible to ensure that our work aligns with the preservation of our planet for future generations.
-                </p>
-        
-                <h3>Social and Community Investment</h3>
-                <p>
-                    Our commitment to social investment is at the heart of everything we do. We create job opportunities for local community members, prioritizing them for employment in our projects. Furthermore, we understand the importance of supporting the sustainability of communities. That’s why we assist in the establishment of community-based initiatives and contribute to programs such as food parcel distributions to those in need.
-                </p>
-        
-                <h3>Competitive Advantage</h3>
-                <p>
-                    Tiprope Consultant & Construction is proudly managed by young black women and is wholly owned by Mpumalanga-based entrepreneurs. Our directors are well-respected members of the community, with influential leadership skills in both business and social sectors. As a learning and growth-oriented organization, we have built a strong network of industry relationships and have secured key contracts across South Africa, ensuring our place as leaders in the civil engineering sector.
-                </p>
-            </div>
-        </section>
-        <section id="contact-us">
-            <div class="container">
-                <div class="contact-left">
-                    <h2>Contact Us</h2>
-                    <p>
-                        <img src="Images/Address.png" alt="Address Icon"> PO Box 2534, Emelo, 2350
-                    </p>
-                    <p>
-                        <img src="Images/Email.png" alt="Email Icon"> tsmashava@gmail.com
-                    </p>
-                    <p>
-                        <img src="Images/Call.png" alt="Call Icon"> 079 875 6408
-                    </p>
-                    
-                </div>
-        
-                <div class="contact-right">
-                    <h2>Send Us a Message</h2>
-                    <form action="submit_form.php" method="POST">
-                        <input type="text" name="full_name" placeholder="Full Name" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-        
-    </main>
-<footer>
-    <p>2025 Tiprope  | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html" target="_blank">Hector Baloyi</a></p>
+    <section id="about">
+      <h2>Mission and Vision Statements</h2>
+      <h3>Mission</h3>
+      <p>
+        To deliver high-quality electrical services that exceed customer expectations,
+        while ensuring safety, reliability, and efficiency.<br>
+        To be the trusted electrical partner for our customers, providing timely,
+        cost-effective, and safe solutions that meet their evolving needs.
+      </p>
+      <h3>Vision</h3>
+      <p>
+        To empower communities by delivering innovative, safe, and reliable
+        electrical solutions.<br>
+        Shining bright as the trusted leader in electrical services, guiding
+        customers to a brighter tomorrow.
+      </p>
+
+      <h2>Main Areas of Activities of the Business and Services</h2>
+      <ul>
+        <li>Cable jointing and termination</li>
+        <li>Laying cables in trenches and racks</li>
+        <li>Installation and maintenance of AC/DC systems</li>
+        <li>Substation equipment, battery banks, and solar systems</li>
+        <li>Domestic electrical installations and COCs</li>
+        <li>Fault finding, meter installations, and data downloading</li>
+        <li>Streetlight and floodlight maintenance</li>
+      </ul>
+    </section>
+
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><img src="Images/Address.png" class="contact-icon" alt="Address"> 29 Kleynhans Street, Makhado Old Town, Makhado, 0920</p>
+      <p><img src="Images/Call.png" class="contact-icon" alt="Call"> Chris Hamule: 082 409 6419</p>
+      <p><img src="Images/Call.png" class="contact-icon" alt="Call"> NB Hamule: 081 207 0961</p>
+      <p><img src="Images/Email.png" class="contact-icon" alt="Email"> Email: <a href="mailto:obyphen@gmail.com">obyphen@gmail.com</a></p>
+      <div class="social-container">
+        <a href="https://www.facebook.com/profile.php?id=100069461716648" target="_blank">
+          <img src="Images/FB.png" alt="Facebook" class="social-icon">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2025 Obyphen Electrical | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html" target="_blank">Hector Baloyi</a></p>
   </footer>
-    <script src="script.js"></script>
 </body>
 </html>
