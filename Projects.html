@@ -1,168 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Obyphen Electrical Construction and Projects</title>
-  <link rel="stylesheet" href="Projects-styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <script src="Projects-script.js" defer></script>
+    <!-- Primary Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore completed electrical projects by Obyphen Electrical Construction and Projects across Makhado, Giyani, and Limpopo. View solar installations, cable jointing work, and domestic setups.">
+<meta name="keywords" content="electrical projects Makhado, solar work Limpopo, cable jointing projects, electrical installations Giyani, Obyphen Electrical projects, Limpopo electrical portfolio">
+<meta name="author" content="Obyphen Electrical Construction and Projects">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Our Electrical Project Portfolio - Obyphen Electrical Construction & Projects">
+<meta property="og:description" content="View our real-world electrical installations and project gallery in Makhado, Giyani, and surrounding Limpopo areas.">
+<meta property="og:image" content="Images/Logo.jpg"> <!-- You can change this to a featured project image -->
+<meta property="og:url" content="https://www.obyphen.co.za/Project.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Obyphen Electrical Project Showcase">
+<meta name="twitter:description" content="Slideshow of solar installations, cable jointing, and electrical setups in Limpopo.">
+<meta name="twitter:image" content="Images/Logo.jpg"> <!-- Also replace with project image if needed -->
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="Images/Logo.jpg">
+
+<!-- Page Title -->
+
+    <title>Projects | Obyphen Electrical Construction and Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Header/Footer Styles */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+            overflow: hidden;
+        }
+        
+        .slideshow-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide img {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+        
+        .dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background-color: #3b82f6;
+        }
+        
+        /* Contact Section Styles */
+        .contact-section {
+            background-color: #f9fafb;
+            padding: 60px 0;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .contact-form button {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .contact-form button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-title .divider {
+            width: 100px;
+            height: 3px;
+            background-color: #3b82f6;
+            margin: 0 auto 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="logo-container">
-      <img src="Images/Logo.jpg" alt="Obyphen Logo" class="logo">
-      <div class="business-info">
-        <p>Tax No. 9743329162</p>
-        <p>Reg No: 2015/340122/07</p>
-        <p>DOL Reg No: GN 04776</p>
-        <p>ECBSA No. 28896</p>
-        <p>Citi-Q CIC No: 4318</p>
-        <p>ETSP No. 04384</p>
-      </div>
-    </div>
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-    <button class="menu-btn" id="menu-btn">
-      <img src="Images/menu.png" alt="Menu">
-    </button>
-  </header>
-  <div class="nav-mobile" id="nav-mobile">
-    <div class="nav-overlay">
-      <span class="close-menu" id="close-menu">&#10005;</span>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
+<body class="bg-gray-50">
+    <!-- Header from index.html -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo + Name -->
+                <div class="flex items-center">
+                    <div class="w-14 h-14">
+                        <img src="images/Logo.jpg" alt="Obyphen Electrical Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Obyphen Electrical</h1>
+                        <p class="text-xs text-gray-600">Construction and Projects (PTY)Ltd</p>
+                    </div>
+                </div>
 
-  <main>
-    <section id="welcome">
-      <div class="welcome-container">
-        <h1>Welcome to Obyphen Electrical Construction and Projects (PTY)Ltd</h1>
-      </div>
-    </section>
-    <section id="projects">
-      <h2>Projects Gallery</h2>
-      <div class="slideshow-container">
-        <button id="prev" class="prev">&#10094;</button>
-        <div class="slideshow-track">
-          <div class="slide"><img src="Images/P1.jpg" alt="Project 1"></div>
-          <div class="slide"><img src="Images/P2.jpg" alt="Project 2"></div>
-          <div class="slide"><img src="Images/P3.jpg" alt="Project 3"></div>
-          <div class="slide"><img src="Images/P4.jpg" alt="Project 4"></div>
-          <div class="slide"><img src="Images/P5.jpg" alt="Project 5"></div>
-          <div class="slide"><img src="Images/P6.jpg" alt="Project 6"></div>
-          <div class="slide"><img src="Images/P7.jpg" alt="Project 7"></div>
-          <div class="slide"><img src="Images/P8.jpg" alt="Project 8"></div>
-          <div class="slide"><img src="Images/P9.jpg" alt="Project 9"></div>
-          <div class="slide"><img src="Images/P10.jpg" alt="Project 10"></div>
-          <div class="slide"><img src="Images/P11.jpg" alt="Project 11"></div>
-          <div class="slide"><img src="Images/P12.jpg" alt="Project 12"></div>
-          <div class="slide"><img src="Images/P13.jpg" alt="Project 13"></div>
-          <div class="slide"><img src="Images/P14.jpg" alt="Project 14"></div>
-          <div class="slide"><img src="Images/P15.jpg" alt="Project 15"></div>
-          <div class="slide"><img src="Images/P16.jpg" alt="Project 16"></div>
-          <div class="slide"><img src="Images/P17.jpg" alt="Project 17"></div>
-          <div class="slide"><img src="Images/P18.jpg" alt="Project 18"></div>
-          <div class="slide"><img src="Images/P19.jpg" alt="Project 19"></div>
-          <div class="slide"><img src="Images/P20.jpg" alt="Project 20"></div>
-          <div class="slide"><img src="Images/P21.jpg" alt="Project 21"></div>
-          <div class="slide"><img src="Images/P22.jpg" alt="Project 22"></div>
-          <div class="slide"><img src="Images/P23.jpg" alt="Project 23"></div>
-          <div class="slide"><img src="Images/P24.jpg" alt="Project 24"></div>
-          <div class="slide"><img src="Images/P25.jpg" alt="Project 25"></div>
-          <div class="slide"><img src="Images/P26.jpg" alt="Project 26"></div>
-          <div class="slide"><img src="Images/P27.jpg" alt="Project 27"></div>
-          <div class="slide"><img src="Images/P28.jpg" alt="Project 28"></div>
-          <div class="slide"><img src="Images/P29.jpg" alt="Project 29"></div>
-          <div class="slide"><img src="Images/P30.jpg" alt="Project 30"></div>
-          <div class="slide"><img src="Images/P31.jpg" alt="Project 31"></div>
-          <div class="slide"><img src="Images/P32.jpg" alt="Project 32"></div>
-          <div class="slide"><img src="Images/P33.jpg" alt="Project 33"></div>
-          <div class="slide"><img src="Images/P34.jpg" alt="Project 34"></div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-blue-600 transition">Home</a>
+                    <a href="index.html#about" class="nav-link font-medium hover:text-blue-600 transition">About Us</a>
+                    <a href="#projects" class="nav-link font-medium hover:text-blue-600 transition">Projects</a>
+                    <a href="#contact" class="nav-link font-medium hover:text-blue-600 transition">Contact Us</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-700 mt-3 rounded-lg px-4 pb-4">
+      <a href="index.html" class="block py-2 border-b border-blue-600 hover:text-blue-100">Home</a>
+      <a href="index.html#about" class="block py-2 border-b border-blue-600 hover:text-blue-100">About Us</a>
+      <a href="#services" class="block py-2 border-b border-blue-600 hover:text-blue-100">Services</a>
+      <a href="#projects" class="block py-2 border-b border-blue-600 hover:text-blue-100">Projects</a>
+      <a href="#contact" class="block py-2 hover:text-blue-100">Contact Us</a>
+    </div>
         </div>
-        <button id="next" class="next">&#10095;</button>
-      </div>
+    </header>
 
-      <div class="dots">
-        <span class="dot active" onclick="jumpToSlide(0)"></span>
-        <span class="dot" onclick="jumpToSlide(1)"></span>
-        <span class="dot" onclick="jumpToSlide(2)"></span>
-        <span class="dot" onclick="jumpToSlide(3)"></span>
-        <span class="dot" onclick="jumpToSlide(4)"></span>
-        <span class="dot" onclick="jumpToSlide(5)"></span>
-        <span class="dot" onclick="jumpToSlide(6)"></span>
-        <span class="dot" onclick="jumpToSlide(7)"></span>
-        <span class="dot" onclick="jumpToSlide(8)"></span>
-        <span class="dot" onclick="jumpToSlide(9)"></span>
-        <span class="dot" onclick="jumpToSlide(10)"></span>
-        <span class="dot" onclick="jumpToSlide(11)"></span>
-        <span class="dot" onclick="jumpToSlide(12)"></span>
-        <span class="dot" onclick="jumpToSlide(13)"></span>
-        <span class="dot" onclick="jumpToSlide(14)"></span>
-        <span class="dot" onclick="jumpToSlide(15)"></span>
-        <span class="dot" onclick="jumpToSlide(16)"></span>
-        <span class="dot" onclick="jumpToSlide(17)"></span>
-        <span class="dot" onclick="jumpToSlide(18)"></span>
-        <span class="dot" onclick="jumpToSlide(19)"></span>
-        <span class="dot" onclick="jumpToSlide(20)"></span>
-        <span class="dot" onclick="jumpToSlide(21)"></span>
-        <span class="dot" onclick="jumpToSlide(22)"></span>
-        <span class="dot" onclick="jumpToSlide(23)"></span>
-        <span class="dot" onclick="jumpToSlide(24)"></span>
-        <span class="dot" onclick="jumpToSlide(25)"></span>
-        <span class="dot" onclick="jumpToSlide(26)"></span>
-        <span class="dot" onclick="jumpToSlide(27)"></span>
-        <span class="dot" onclick="jumpToSlide(28)"></span>
-        <span class="dot" onclick="jumpToSlide(29)"></span>
-        <span class="dot" onclick="jumpToSlide(30)"></span>
-        <span class="dot" onclick="jumpToSlide(31)"></span>
-        <span class="dot" onclick="jumpToSlide(32)"></span>
-        <span class="dot" onclick="jumpToSlide(33)"></span>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <section id="projects">
+            <div class="section-title">
+                <h2>Projects Gallery</h2>
+                <div class="divider"></div>
+            </div>
+            <p class="intro-text">
+                Explore our portfolio of completed projects showcasing our expertise in electrical installations and solutions.
+            </p>
+            
+            <div class="slideshow-container">
+                <button id="prev" class="prev">&#10094;</button>
+                <div class="slideshow-track" id="slideshow-track">
+                    <div class="slide"><img src="Images/P1.jpg" alt="Project 1"></div>
+                    <div class="slide"><img src="Images/P2.jpg" alt="Project 2"></div>
+                    <div class="slide"><img src="Images/P3.jpg" alt="Project 3"></div>
+                    <div class="slide"><img src="Images/P4.jpg" alt="Project 4"></div>
+                    <div class="slide"><img src="Images/P5.jpg" alt="Project 5"></div>
+                    <div class="slide"><img src="Images/P6.jpg" alt="Project 6"></div>
+                </div>
+                <button id="next" class="next">&#10095;</button>
+            </div>
 
-    <section id="quotation">
-  <h2>Request a Quotation</h2>
-  <form class="quotation-form" action="https://formsubmit.co/el/hexemu" method="POST" onsubmit="window.location.href='thankyou.html'; return false;">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="text" name="location" placeholder="Location" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="service" placeholder="Required Service" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-    </section>
+            <div class="dots">
+                <span class="dot active" onclick="jumpToSlide(0)"></span>
+                <span class="dot" onclick="jumpToSlide(1)"></span>
+                <span class="dot" onclick="jumpToSlide(2)"></span>
+                <span class="dot" onclick="jumpToSlide(3)"></span>
+                <span class="dot" onclick="jumpToSlide(4)"></span>
+                <span class="dot" onclick="jumpToSlide(5)"></span>
+            </div>
+        </section>
+    </main>
 
+    <!-- Contact Section from index.html -->
     <section id="contact" class="contact-section">
-      <div class="contact-info">
-        <h3>Contact Details:</h3>
-        <p>Lulama Hamule: 082 409 6419</p>
-        <p>NB Hamule: 081 207 0961</p>
-        <p>Email: obyphen@gmail.com</p>
-      </div>
-      <div class="contact-address">
-        <h2>Address</h2>
-        <p>29 Kleynhans Street<br>Makhado Old Town<br>Makhado, 0920</p>
-        <a href="https://www.facebook.com/profile.php?id=100069461716648">
-          <img src="Images/FB.png" alt="Facebook" width="50">
-        </a>
-      </div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Get in touch with our team for professional electrical services and solutions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600 hover:text-blue-600 transition">
+                                        <a href="mailto:obyphen@gmail.com">obyphen@gmail.com</a>
+                                    </p>
+                                    <p class="text-gray-600 hover:text-blue-600 transition">
+                                        <a href="mailto:info@obyphen.co.za">info@obyphen.co.za</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600 hover:text-blue-600 transition">
+                                        <a href="tel:0824096419">Lulama Hamule: 082 409 6419</a>
+                                    </p>
+                                    <p class="text-gray-600 hover:text-blue-600 transition">
+                                        <a href="tel:0812070961">NB Hamule: 081 207 0961</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-globe text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Website</h4>
+                                    <p class="text-gray-600 hover:text-blue-600 transition">
+                                        <a href="https://www.obyphen.co.za" target="_blank">https://www.obyphen.co.za</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Address</h4>
+                                    <p class="text-gray-600">29 Kleynhans Street, Makhado Old Town, Makhado 0920</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=100069461716648" class="social-icon text-blue-600 hover:text-blue-800 text-2xl transition">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                        <form id="contactForm" action="https://formsubmit.co/el/hexemu" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>2025 Obyphen Electrical | Designed by <a href="https://www.valoyitech.co.za/">Hector Baloyi</a></p>
-  </footer>
+    <!-- Footer from index.html -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-3">
+                        <div class="w-14 h-14">
+                            <img src="images/Logo.jpg" alt="Obyphen Electrical Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">Obyphen Electrical</h2>
+                            <p class="text-sm text-gray-400">Construction and Projects (PTY)Ltd</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Providing quality electrical solutions with professionalism and reliability across South Africa.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3 text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="index.html#about" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-blue-400 transition">Services</a></li>
+                        <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal + Designer -->
+                <div class="text-sm text-gray-400">
+                    <h3 class="text-lg font-semibold mb-3 text-white">Legal & Design</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Terms of Service</a></li>
+                        <li class="mt-4">
+                            &copy; 2025 Obyphen Electrical <br>
+                            Designed by
+                            <a href="https://valoyitech.co.za/" target="_blank" class="text-blue-400 hover:text-blue-600 font-medium">
+                                ValoyItech
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Registration Info -->
+            <div class="border-t border-gray-700 pt-4 text-center text-xs text-gray-500">
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span>Tax No: 9743329162</span>
+                    <span>Reg No: 2015/340122/07</span>
+                    <span>DOL Reg No: GN 04776</span>
+                    <span>ECBSA No: 28896</span>
+                    <span>Citi-Q CIC No: 4318</span>
+                    <span>ETSP No: 04384</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll(".slide");
+            const track = document.querySelector(".slideshow-track");
+            const prevBtn = document.getElementById("prev");
+            const nextBtn = document.getElementById("next");
+            const dots = document.querySelectorAll(".dot");
+
+            let currentIndex = 0;
+
+            function updateSlidePosition() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle("active", index === currentIndex);
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlidePosition();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlidePosition();
+            }
+
+            function jumpToSlide(index) {
+                currentIndex = index;
+                updateSlidePosition();
+            }
+
+            // Event Listeners
+            nextBtn.addEventListener("click", nextSlide);
+            prevBtn.addEventListener("click", prevSlide);
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    jumpToSlide(index);
+                });
+            });
+
+            // Auto slide change
+            setInterval(nextSlide, 5000);
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
-  </html>
+</html>
